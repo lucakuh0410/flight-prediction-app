@@ -1,7 +1,13 @@
-# Welcome to streamlit
+### Problem
 
-This is the app you get when you run `streamlit hello`, extracted as its own app.
+Maneuvering through the vast array of flight options available is a common challenge for travelers. The looming spectre of flight cancellations adds an extra layer of anxiety to the decision-making process. Uncertainty as to whether the chosen flight will go ahead as planned creates a palpable sense of apprehension among customers. The complex nature of flight schedules and the myriad choices available contribute to the complexity of the situation. Customers, eager to plan their trip in complete transparency, find themselves navigating a landscape marked by the fear of disruption. The potential consequences of a cancelled flight, ranging from itinerary changes to logistical headaches, amplify the stress associated with travel decision-making.
 
-Edit [Hello.py](./Hello.py) to customize this app to your heart's desire. ❤️
+### Solution
 
-Check it out on [Streamlit Community Cloud](https://st-hello-app.streamlit.app/)
+Our aim was to create a system in Python that would calculate for users the probability of cancellation of their upcoming flights. In this way, users will be able to get an idea of the probability of cancellation of their flights and, as a result, be more confident about their vacations, enabling them to plan and enjoy their travel experiences with greater peace of mind. This innovative tool aims to enhance the overall travel experience by providing users with valuable information on potential disruptions, promoting a sense of control and reassurance in their vacation plans.
+
+To achieve this objective, we used a comprehensive dataset containing vital flight information during the 2022 year, including details such as destination city, origin city and flight numbers. To ensure data accuracy and relevance, we meticulously cleaned the dataset by eliminating columns deemed non-essential and removing all instances of NaN values, thus refining the dataset for more accurate analysis. Following that, a column dubbed "unique_flight" was crafted, seamlessly merging the airline, origin, and destination details, allowing sophisticated calculation of flight cancellation probabilities.
+
+In the initial phase, the user is prompted to provide their flight number, allowing the system to swiftly retrieve and calculate the probability of cancellation. In instances where the system encounters difficulty locating the specified flight with only the number, it prompts the user for more detailed information, starting with the destination city, followed by the origin city, and culminating with the date of the flight. If no such flight exists, the user is asked whether to continue the search or to exit the system.
+
+In developing the code, particular attention was paid to ensuring a user-friendly experience throughout the implementation. For example, when the user is prompted for the name of a city, the code accommodates variations by allowing users to provide partial names, recognizing the difficulty of remembering exact city names. In this case, the code intuitively presents a list of potential city names, offering a transparent and user-friendly interaction.
